@@ -1,17 +1,17 @@
-// const person: {
-//   name: string
-//   age: number
-//   sayHi: any
-// } = {
 var person = {
+    // const person = {
     name: 'Venkat',
     age: 21,
     hobbies: ['Sports', 'Cooking'],
+    role: [1, 'admin'],
     sayHi: function () {
         return "Hello, " + this.name;
     }
 };
+// tuple won't work with array methods
+// person.role.push('hello')
 var favActivities;
+// let favActivities: Array<string>
 favActivities = ['Sports', 'Cooking'];
 var favActivities1;
 favActivities1 = ['Sports', 1, true];

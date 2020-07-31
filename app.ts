@@ -1,18 +1,25 @@
-// const person: {
-//   name: string
-//   age: number
-//   sayHi: any
-// } = {
-const person = {
+const person: {
+  name: string
+  age: number
+  hobbies: string[]
+  role: [number, string] // tuple
+  sayHi: any
+} = {
+// const person = {
   name: 'Venkat',
   age: 21,
   hobbies: ['Sports', 'Cooking'],
+  role: [1, 'admin'],
   sayHi() {
     return `Hello, ${this.name}`
   }
 }
 
+// tuple won't work with array methods
+// person.role.push('hello')
+
 let favActivities: string[]
+// let favActivities: Array<string>
 favActivities = ['Sports', 'Cooking']
 
 let favActivities1: any[]
