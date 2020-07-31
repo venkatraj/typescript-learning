@@ -77,5 +77,6 @@
   ],
   "include": [
     "app.ts"
-  ]
+  ],
+  "files": [] // only files whereas exclude/include can work with folders
 }
