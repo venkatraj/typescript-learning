@@ -65,5 +65,14 @@
     /* Advanced Options */
     "skipLibCheck": true,                     /* Skip type checking of declaration files. */
     "forceConsistentCasingInFileNames": true  /* Disallow inconsistently-cased references to the same file. */
-  }
+  },
+  "exclude": [
+    "node_modules", // would be the default
+    "adv-types.ts",
+    "basics.ts",
+    "function-types.ts",
+    "literals.ts",
+    "unions-types.ts",
+    "unknow-never.ts"
+  ]
 }
