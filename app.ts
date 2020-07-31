@@ -1,17 +1,21 @@
-function add(n1: number, n2: number, showResult: boolean, phrase: string) {
-  const result = n1 + n2
-  if (showResult) {
-    console.log(phrase + result)
-  } else {
-
-    return result
+// const person: {
+//   name: string
+//   age: number
+//   sayHi: any
+// } = {
+const person = {
+  name: 'Venkat',
+  age: 21,
+  hobbies: ['Sports', 'Cooking'],
+  sayHi() {
+    return `Hello, ${this.name}`
   }
 }
 
-let number1 = 5;
-const number2 = 2.8;
-const showResult = true
-const phrase = 'Result is '
- 
-const result = add(number1, number2, showResult, phrase)
-// console.log(result) 
+let favActivities: string[]
+favActivities = ['Sports', 'Cooking']
+
+let favActivities1: any[]
+favActivities1 = ['Sports', 1, true]
+
+console.log(person.sayHi())
