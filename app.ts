@@ -19,3 +19,10 @@ let favActivities1: any[]
 favActivities1 = ['Sports', 1, true]
 
 console.log(person.sayHi())
+
+for(const hobby of favActivities) {
+  // inferred correct as string, so string methods as available
+  console.log(hobby.toUpperCase()); 
+  // show error when you access array methods, because it is string
+  // console.log(hobby.map())
+}
