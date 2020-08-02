@@ -1,19 +1,14 @@
-"use strict";
-// Same as `any`, you can assign any type to `unknown`
-var userInput;
-userInput = 5;
-userInput = 'TS';
-// But still different, can't assign `unknown` to other types
-var userName;
-userName = userInput;
-// fix
-if (typeof (userInput) === 'string') {
-    userName = userInput;
+var Student = /** @class */ (function () {
+    function Student(firstName, middleInitial, lastName) {
+        this.firstName = firstName;
+        this.middleInitial = middleInitial;
+        this.lastName = lastName;
+        this.fullName = firstName + " " + middleInitial + " " + lastName;
+    }
+    return Student;
+}());
+function greeter(person) {
+    return "Hello, " + person.firstName + " " + person.lastName;
 }
-function generateError(message, code) {
-    throw {
-        message: message,
-        errorCode: code
-    };
-}
-generateError('An error occured', 500);
+var user = new Student("Jane", "M.", "User");
+document.body.textContent = greeter(user);

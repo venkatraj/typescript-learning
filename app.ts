@@ -1,23 +1,19 @@
-// Same as `any`, you can assign any type to `unknown`
-let userInput: unknown;
-
-userInput = 5;
-userInput = 'TS'
-
-// But still different, can't assign `unknown` to other types
-let userName: string
-userName = userInput
-
-// fix
-if (typeof(userInput) === 'string') {
-  userName = userInput
+class Student {
+  fullName: string;
+  constructor(public firstName: string, public middleInitial: string, public lastName: string) {
+      this.fullName = firstName + " " + middleInitial + " " + lastName;
+  }
 }
 
-function generateError(message: string, code: number): never {
-  throw {
-    message: message,
-    errorCode: code
-  };
-} 
+interface Person {
+  firstName: string;
+  lastName: string;
+}
 
-generateError('An error occured', 500)
+function greeter(person: Person) {
+  return "Hello, " + person.firstName + " " + person.lastName;
+}
+
+let user = new Student("Jane", "M.", "User");
+
+document.body.textContent = greeter(user);
